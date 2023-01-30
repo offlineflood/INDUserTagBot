@@ -1,0 +1,50 @@
+{
+  "name": "User Tag Bot",
+  "logo":"https://te.legra.ph/file/512eac147a98221ab318e.jpg",
+  "description": "İstifadəçi tagger botu pulsuz üzvlərinizi etiketləyən bir botdur.",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Bot icon from Botfather @BotFather.",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org.",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org.",
+      "value": ""
+    },
+    "BOT_NAME": {
+      "description": "User Tag A name for your bot. Please do not use ascii characters.",
+      "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": "Enter the address of the bot.",
+      "value": ""
+    },
+    "BOT_ID": {
+      "description": "Enter bot id.",
+      "value": ""
+    },
+    "SUDO_USERS": {
+      "description": "Enter the owner of the bot.",
+      "value": ""
+    },
+    "SUPPORT_CHAT": {
+      "description": "Join the bot's support group.",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "The user IDs of the user(s) you want to add as the OWNER. Multiple values must be separated by a space.",
+      "value": ""
+    },
+    "OWNER_USERNAME": {
+      "description": "Enter the address of the bot owner.",
+      "value": ""
+    }
+  },
+  "buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }]
+}
