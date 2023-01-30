@@ -40,11 +40,11 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.reply(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
-                     [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-	             [Button.inline(f"📚 Əmrlər", data="help"),
-	              Button.inline(f"📑 Təkliflər", data="reklam")],
-	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+     await event.reply(f"**🤖Hello...{ad}💭,**\nMy Name is [𝐔𝐒𝐓𝐀 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝑟](http://t.me/UstaTagbot)-u.\n**I have the authority to tag all members in your group.\n\ n🤖For more information, visit the '📚Commands' section.**", buttons=(
+                     [Button.url('➕ Add me to a Group ➕','http://t.me/UstaTagbot?startgroup=a')],
+	             [Button.inline(f"📚 Commandments", data="help"),
+	              Button.inline(f"📑 Offers", data="reklam")],
+	             [Button.url('Group💬', 'https://t.me/DejavuTeam'),
                       Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
                     ),
                     link_preview=False)
@@ -52,9 +52,9 @@ async def start(event):
 
   if event.is_group:
     return await client.send_message(event.chat_id, f"** [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)'un Əmrlər üçün?.Bot'a daxil olub.**", buttons=(
-                     [Button.url('💡Bota Keç','https://t.me/UstaTagbot?start=start')],
+                     [Button.url('💡Switch to Bota','https://t.me/UstaTagbot?start=start')],
 	             [Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots'),
-		      Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt')],
+		      Button.url('Group💬', 'https://t.me/DejavuTeam')],
                     ),
                     link_preview=False)
 
@@ -64,11 +64,11 @@ async def start(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
-                     [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-	             [Button.inline(f"📚 Əmrlər", data="help"),
-	              Button.inline(f"📑 Təkliflər", data="reklam")],
-	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+     await event.edit(f"**🤖Hello...💭,**\nMy Name is [𝐔𝐒𝐓𝐀 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝑟](http://t.me/UstaTagbot)-u.\n**I have the authority to tag all members in your group.\n\ n🤖For more information, visit the '📚Commands' section.**", buttons=(
+                     [Button.url('➕ Add me to a Group ➕','http://t.me/UstaTagbot?startgroup=a')],
+	             [Button.inline(f"📚 Commandments", data="help"),
+	              Button.inline(f"📑 Offers", data="reklam")],
+	             [Button.url('Group💬', 'https://t.me/DejavuTeam'),
                       Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
                     ),
                     link_preview=False)
@@ -76,20 +76,20 @@ async def handler(event):
 
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):	
-    await event.edit(f"** [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-un Kömək '📚 Əmrlər' Bunlardır.⤵**\n\n\n•━━━━━━━━•••━━━━━━━━•\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n•━━━━━━━━•••━━━━━━━━•", buttons=(
-	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+    await event.edit(f"** [𝐔𝐒𝐓𝐀 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-un Help '📚 Commands' These are.⤵**\n\n\n•━━━━━━━━•••━━━━━━━━•\n**🤖➪ /tag <reason> - 5 Tag Shoots with.**\n**🤖➪ /etag <reason> - Tags with Emoji.**\n**🤖➪ /stag <reason> - Tags with Words.**\n**🤖 ➪ /tektag <reason> - Individual tags with members.**\n**🤖➪ /master <reason> - Tag tags related to master Tag Bot.**\n**🤖➪ /admins <reason> - Admins Individual tags.**\n**🤖➪ /cancel - Stop Tag Filtering.**\n•━━━━━━━━•••━━━━━━━━•", buttons=(
+	             [Button.url('Group💬', 'https://t.me/DejavuTeam'),
                       Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
-	             [Button.inline(f"🔙 Geri", data="start")]
+	             [Button.inline(f"🔙 Back", data="start")]
                     ),
                     link_preview=False)
 
 @client.on(events.callbackquery.CallbackQuery(data="reklam"))
 async def handler(event):	
-    await event.edit(f"**📌 [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-un & 𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍ Təkliflər üçün sahib'lə əlaqə saxlaya bilərsiniz...**", buttons=(
-		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+    await event.edit(f"**📌 You can contact the owner for offers...**", buttons=(
+		     [Button.url('🎉 Owner', 'https://t.me/MUCVE_M')],
+	             [Button.url('Group💬', 'https://t.me/DejavuTeam'),
                       Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
-	             [Button.inline(f"🔙 Geri", data="start")]
+	             [Button.inline(f"🔙 Back", data="start")]
                     ),
                     link_preview=False)
 	
@@ -108,13 +108,13 @@ emoji = "😀 🐵 🍓 😃 🦁 🍒 😄 🐯 🍎 😁 🐱 🍉 😆 🐶 �
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu əmr qruplar üçün etibarlıdır!**")
+    return await event.respond("**This command is valid for groups!**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu əmrdən yalnız idarəçilər istifadə edə bilər!**")
+    return await event.respond("**Only administrators can use this command!**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -123,11 +123,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
+        return await event.respond("**I Can Reply to Previous Messages! **")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
+    return await event.respond("**There is no reason to start! **")
   else:
-    return await event.respond("**Tag'a başlamaq üçün səbəb yazın...!**")
+    return await event.respond("**Write a reason to start the tag...!**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -137,7 +137,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("** Tag əməliyyatı uğurla dayandırıldı!**")
+        await event.respond("** Tag operation successfully terminated!**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -155,7 +155,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("**Operation Stopped Successfully! **")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -174,13 +174,13 @@ async def cancel(event):
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu əmr qruplar üçün etibarlıdır! ** ")
+    return await event.respond("**This command is valid for groups! ** ")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu əmrdən yalnız idarəçilər istifadə edə bilər! **")
+    return await event.respond("**Only administrators can use this command! **")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -189,11 +189,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
+        return await event.respond("**I Can Reply to Previous Messages! **")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
+    return await event.respond("**There is no reason to start! **")
   else:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur,yazın...! **")
+    return await event.respond("**There is no reason to start, write...! **")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -203,7 +203,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("**Operation Stopped Successfully! **")
         return
       if usrnum == 5:   
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -221,7 +221,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
+        await event.respond(" **Tag operation successfully terminated! **")
         return
       if usrnum == 5:   
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -239,13 +239,13 @@ async def cancel(event):
 async def mentionall(event):
   global tekli_calisan
   if event.is_private:
-    return await event.respond("**Bu əmr qruplar üçün etibarlıdır! **")
+    return await event.respond("**This command is valid for groups! **")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu əmrdən yalnız idarəçilər istifadə edə bilər! ** ")
+    return await event.respond("**Only administrators can use this command! ** ")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -254,11 +254,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
+        return await event.respond("**I Can Reply to Previous Messages! **")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
+    return await event.respond("**There is no reason to start! **")
   else:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur,yazın...! **")
+    return await event.respond("**There is no reason to start, write...! **")
   
   if mode == "text_on_cmd":
     tekli_calisan.append(event.chat_id)
@@ -268,7 +268,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**↯ [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("**Operation Stopped Successfully! **")
         return
       if usrnum == 1: 
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -286,7 +286,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("**Operation Stopped Successfully! **")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -301,102 +301,64 @@ async def cancel(event):
 	
 
 stag = (
-"Bəzi insanlar yağışı hiss edər, digərləri isə sadəcə islanar",
-"Unutma; Hər gələn sevməz.. Və heç bir sevgili getməz",
-"Heç bir ruhun ağrısı sənin dərdindən az deyil",
-"Mən hər şeyi sınayıram; amma bacardığımı edirəm.",
-"Sevgi bir qadının həyatının bütün hekayəsidir və bir kişinin yeganə macərasıdır.",
-"Xoşbəxtlik ilk növbədə bədən sağlamlığındadır.",
-"Nə qədər yaşadığımız deyil, necə yaşadığımızdır",
-"Yer göy qurşağı, ağıl prizma, varlıq isə ağ şüadır.",
-"Hara getdiyinizi bilmirsinizsə, hansı tərəfə getdiyinizin əhəmiyyəti yoxdur.",
-"Həyatın ən qiymətli vaxtıdır. Kimə hədiyyə etdiyinizə diqqət edin.",
-"Evin bütün pəncərələrini sındırıb, sonra qapını döyə bilməzsən.",
-"Xoşbəxtlik yaşadığın həyat tərzində deyil, həyata baxış tərzindədir.",
-"Unutma; Hər gələn sevməz.. Və heç bir sevgili getməz.",
-"Bu həyatda yarım nəfəs. Sevgidən başqa heç nə planlaşdırma...",
-"Hər kəsə içindəki yaxşılar qədər yaxşı bir həyat arzulayıram.",
-"Gözəlliyi gözəl edən ədəbdir, ədəb isə gözəlliyi sevmək üçün səbəbdir!",
-"Qızılgülün ətri qızılgül verənin əlində qalır",
-"Axtardığın şey səni axtarandır.",
-"Hətta bir quş da göydə qanad çırpar.",
-"Könül almağı bilməyənlərə həyat əmanət deyil.",
-"Dürüst olmaqdan qorxma, ən çox itirəcəyiniz yanlış insanlar olacaq.",
-"İnsan ağac deyil, qırılanda səs çıxararsan.",
-"Öyrənmək həyatın yeganə sübutudur.",
-"Dünya əhalisi artdıqca insanların sayı azalır.",
-"Layiq olmadığını düşündüyünüz insanlara əsla həqiqəti deməyin.",
-"Çox şükür ki, göy hələ heç bir pul kisəsinə sığmır.",
-"Özün ol. Artıq hamı götürüb.",
-"Zərər çəkdim, boğazımdakı düyünləri uddum.",
-"O qədər gözəl gülümsəyirdi ki, sevməsəydim boşuna olardı.",
-"Onun sevdiyi men deyilem. Bunun ağrısını sizə deyə bilmərəm.",
-"Onun sevdiyi men deyilem. Bunun ağrısını sizə deyə bilmərəm.",
-"Zamanla hər şeyə alışırsan, amma bitmir.",
-"Əgər həqiqəti deyirsənsə, heç nəyi xatırlamağa ehtiyac yoxdur.",
-"Həqiqəti ilk söyləyən siz olun... Əks halda kimsə sizin yerinizə mütləq həqiqəti söyləyəcək.",
-"Kişilər daha güclü ola bilər, amma qadınlar dözümlüdürlər.",
-"Ağrı üçün heç bir resept yoxdur",
-"Ardınca getməyə cəsarətiniz varsa, bütün arzular gerçəkləşə bilər.",
-"Bu gizli sevgidir, heç kimə dərdlərimi deyə bilmərəm.",
-"Sizcə sevgi hər şeyi bağışlayır?",
-"Mənə də, sənə də siqaret lazımdır",
-"Mən səndən xüsusi birini tanımırdım",
-"Bir gün sevgi bitər, xatirələr qalır",
-"Sevmək nə qədər uzun bir sözdür!",
-"Hatırladığım en unutulası şeysin.",
-"Birlikdə gülmək üçün darıxdığım insanlar var.",
-"Xoşbəxtliyi səndə tapan sənindir, üstəlik qonaq.",
-"Çox sev, amma bəyənmirsənsə məcbur etmə!",
-"O  qədər  gözəl gülürdü ki, sevməsəm ziyan olacaqdı.",
-"və  insan insana yoldaş olmalı yaralarını sağalatmalı",
-"Məzarlıq, əsəb  uğruna peşman olanlarla dolu",
-"Eşq külək  kimidir görməzsən ama hiss edə bilərsən.",
-"tərəzi  var ölçü var , hərşeyin bir vaxtı var",
-"Yanıltmasın səni masum baxışlar, bəzılarını şeytan ayaqdə alqışlar...",
-"həyat sabahı gözləyəcək qədər uzun deyil",
-"Yaxşılar əsla itirməz , itirilir.",
-"görməzden gəldiyin sevgiyə möhtac qalman diləyiylə",
-"Kaşki ağıl vermək yerinə hüzur versəniz",
-"Heç bilmədiyim o qoxunu çox özləyirəm",
-"𝑌𝑎𝑥𝑠̧𝚤 𝑜𝑙𝑎𝑛 𝑖𝑡𝑖𝑟𝑠𝑒𝑑𝑒 𝑞𝑎𝑧𝑎𝑛ı𝑟",
-"𝐴ş𝑖𝑞 𝑜𝑙𝑚𝑎𝑞 𝑔𝑜̈𝑧ə𝑙 𝑏𝑖𝑟 ş𝑒𝑦 𝑎𝑚𝑎 𝑠𝑎𝑑ə𝑐ə 𝑠ənə",
-"𝐻𝑒𝑐̧𝑘𝑖𝑚 ℎ𝑒𝑐̧𝑘𝑖𝑚𝑖 𝑖𝑡𝑖𝑟𝑚𝑒𝑧  𝑔𝑖𝑑ə𝑛 𝑏𝑎ş𝑞𝑎𝑠ı𝑛ı 𝑡𝑎𝑝𝑎𝑟, 𝑞𝑎𝑙𝑎𝑛 𝑜̈𝑧𝑢̈𝑛𝑢̈",
-"Ç𝑜𝑥 ö𝑛ə𝑚𝑠ə𝑑𝑖𝑘 𝑖şə 𝑦𝑎𝑟𝑎𝑚𝑎𝑑ı 𝑎𝑟𝑡𝚤𝑞 𝑏𝑜ş𝑣𝑒𝑟𝑖𝑟𝑖𝑘",
-"Ö𝑚𝑟ü𝑛ü𝑧ü 𝑠𝑢𝑠𝑑𝑢𝑞𝑙𝑎𝑟𝚤𝑛𝚤𝑧𝚤  𝑒𝑠̧𝑖𝑑𝑒𝑛 𝑏𝑖𝑟𝑖𝑦𝑙ə 𝑘𝑒ç𝑖𝑟𝑖𝑛",
-"𝐺ö𝑛𝑙ü𝑛ü𝑧ə  𝑎𝑙𝑑ığı𝑛ı𝑧 𝑔ö𝑛𝑙ü𝑛ü𝑧ü 𝑎𝑙𝑚𝑎𝑔̆ı 𝑏𝑖𝑙𝑠𝑖𝑛",
-"𝑆ə𝑛 ç𝑜𝑥 𝑠𝑒𝑣 𝑑𝑒 𝑏𝑢𝑟𝑎𝑥ı𝑏  𝑔𝑖𝑑ə𝑛 𝑦𝑎𝑟 𝑢𝑡𝑎𝑛𝑠ı𝑛",
-"𝑌𝑎𝑥𝑠̧𝚤 𝑜𝑙𝑎𝑛 𝑖𝑡𝑖𝑟𝑠ə𝑑ə 𝑞𝑎𝑧𝑎𝑛ı𝑟",
-"𝑆𝑎𝑣𝑎ş𝑚𝑎𝑦ı 𝑏𝑢𝑟𝑎𝑥𝚤𝑟𝑎𝑚  𝑏𝑢𝑛𝑢 𝑣𝑒𝑑𝑎 𝑠𝑎𝑦",
-"𝑁ə 𝑖ç𝑖𝑚𝑑ə𝑘𝑖 𝑘𝑢̈𝑐̧ə𝑙ə𝑟ə 𝑠ığ𝑎𝑏𝑖𝑙𝑑𝑖𝑚 𝑁ə 𝑑ə 𝑐̧𝑜̈𝑙𝑑ə𝑘𝑖 𝑑ü𝑛𝑦𝑎𝑦𝑎",                  
-"𝐴𝑟𝑡ı𝑞 ℎ𝑒ç𝑏𝑖𝑟 ş𝑒𝑦 ə𝑣𝑣ə𝑙𝑘𝑖 𝑘𝑖𝑚𝑖 𝑑𝑒𝑦𝑖𝑙 𝐵𝑢𝑛𝑎 𝑚ə𝑛𝑑ə 𝑑𝑎𝑥𝑖𝑙ə𝑚",                
-"𝐴ş𝑖𝑞 𝑜𝑙𝑚𝑎𝑞 𝑔𝑜̈𝑧𝑒𝑙 𝑏𝑖𝑟 ş𝑒𝑦 𝑎𝑚𝑎 𝑠𝑎𝑑ə𝑐ə 𝑠ə𝑛ə",                 
-"İ𝑛𝑠𝑎𝑛 𝑎𝑛𝑙𝑎𝑑ığı 𝑣𝑒 𝑎𝑛𝑙𝑎şı𝑙𝑑ığı 𝑖𝑛𝑠𝑎𝑛𝑑𝑎 ç𝑖çə𝑘 𝑎ç𝑎𝑟",
-"𝑌𝑎𝑥𝑠̧𝚤𝑦𝑎𝑚 𝑑𝑒𝑠ə𝑚 𝑖𝑛𝑎𝑛𝑎𝑐𝑎𝑞, 𝑜 𝑘ə𝑑ə𝑟 𝑥ə𝑏ə𝑟𝑠𝑖𝑧 𝑚ə𝑛𝑑ə𝑛", 
-"𝐸𝑙ə 𝑔𝑜̈𝑧ə𝑙 𝑏𝑎𝑥𝑡ı 𝑘𝑖 𝑞ə𝑙𝑏𝑖 𝑑ə 𝑔ü𝑙üşü 𝑞ə𝑑ə𝑟 𝑔𝑜̈𝑧ə𝑙 𝑠𝑎𝑛𝑚ış𝑡ı𝑚",
-"𝑀ə𝑠𝑎𝑓ə𝑙ə𝑟 𝑈𝑚𝑟𝑢𝑚𝑑𝑎 𝐷𝑒𝑦𝑖𝑙, İç𝑖𝑚𝑑ə 𝐸𝑛 𝐺ü𝑧ə𝑙 𝑌𝑒𝑟𝑑ə𝑠ə𝑛",
-"İ𝑛𝑠𝑎𝑛 𝑏ə𝑧ə𝑛 𝑏𝑜̈𝑦ü𝑘 𝑥ə𝑦𝑎𝑙𝑙𝑎𝑟𝚤𝑛𝚤 𝑘𝑖ç𝑖𝑘 𝑖𝑛𝑠𝑎𝑛𝑙𝑎𝑟𝑙𝑎 𝑧𝑖𝑦𝑎𝑛 𝑒𝑑ə𝑟",
-"𝐻𝑒𝑐̧𝑘𝑖𝑚 ℎ𝑒𝑐̧𝑘𝑖𝑚𝑖 𝑖𝑡𝑖𝑟𝑚ə𝑧 𝑔𝑒𝑑ə𝑛 𝑏𝑎ş𝑞𝑎𝑠ı𝑛ı 𝑡𝑎𝑝𝑎𝑟  𝑞𝑎𝑙𝑎𝑛 𝑜̈𝑧𝑢̈𝑛𝑢̈",
-"Ç𝑜𝑥 ö𝑛ə𝑚𝑠ə𝑑𝑖𝑘 𝑖şə 𝑦𝑎𝑟𝑎𝑚𝑎𝑑ı 𝑎𝑟𝑡ı𝑞 𝑏𝑜ş𝑣𝑒𝑟𝑖𝑟𝑖𝑘",              
-"𝐵𝑖𝑟 ç𝑖ç𝑒𝑘𝑙𝑒 𝑔ü𝑙𝑒𝑟 𝑞𝑎𝑑ı𝑛 𝑏𝑖𝑟 𝑙𝑎𝑓𝑙𝑎 ℎü𝑧ü𝑛",
-"𝐻ə𝑟 ş𝑒𝑦𝑖 𝑏𝑖𝑙ə𝑛 𝑑𝑒𝑦𝑖𝑙 𝑞ı𝑦𝑚ə𝑡 𝑏𝑖𝑙ə𝑛 𝑖𝑛𝑠𝑎𝑛𝑙𝑎𝑟 𝑜𝑙𝑠𝑢𝑛 ℎə𝑦𝑎𝑡ı𝑛ı𝑧𝑑𝑎",
-"𝑉𝑒𝑟𝑖𝑙ə𝑛 𝑑ə𝑦ə𝑟𝑖𝑛 𝑛𝑎𝑛𝑘𝑜𝑟𝑢 𝑜𝑙𝑚𝑎𝑦ı𝑛 𝑔𝑒𝑟𝑖𝑠𝑖 ℎə𝑙𝑙𝑜𝑙𝑢𝑟",
-"𝑀ə𝑠𝑎𝑓ə 𝑖𝑦𝑖𝑑𝑖𝑟 𝑁ə ℎə𝑑𝑑𝑖𝑛𝑖 𝑎ş𝑎𝑛 𝑜𝑙𝑢𝑟 𝑛ə 𝑑ə 𝑐𝑎𝑛ı𝑛ı 𝑠ı𝑥𝑎𝑛",                
-"𝐻ə𝑦𝑎𝑡 𝑖rəl𝑖𝑦ə 𝑏𝑎𝑥ı𝑙𝑎𝑟𝑎𝑞 𝑦𝑎ş𝑎𝑛ı𝑟 𝑔𝑒𝑟𝑖𝑦ə  𝑏𝑎𝑥𝑎𝑟𝑎𝑞 𝑎𝑛𝑙𝑎şı𝑙ı𝑟",
-"𝑆ə𝑛 ç𝑜𝑥 𝑠𝑒𝑣 ,  𝑔𝑒𝑑ə𝑛 𝑦𝑎𝑟 𝑢𝑡𝑎𝑛𝑠ı𝑛",
-"𝐵𝑖𝑟 𝑀𝑜̈𝑐𝑢̈𝑧ə𝑦ə 𝐸ℎ𝑡𝑖𝑦𝑎𝑐ı𝑚 𝑉𝑎𝑟 𝑖𝑑𝑖 𝐻ə𝑦𝑎𝑡 𝑆ə𝑛𝑖 𝑄𝑎𝑟şı𝑚𝑎 Çı𝑥𝑎𝑟𝑑ı",
-"İ𝑛𝑠𝑎𝑛 𝑎𝑛𝑙𝑎𝑑ığı 𝑣ə 𝑎𝑛𝑙𝑎şı𝑙𝑑ığı 𝑖𝑛𝑠𝑎𝑛𝑑𝑎 ç𝑖çə𝑘 𝑎ç𝑎𝑟",
-"𝑢̈𝑟ə𝑦𝑖𝑚𝑖𝑛 𝑡𝑎𝑚 𝑜𝑟𝑡𝑎𝑠ı𝑛𝑑𝑎 𝑏𝑜̈𝑦ü𝑘 𝑏𝑖𝑟                    𝑦𝑜𝑟𝑔̆𝑢𝑛𝑙𝑢𝑞 𝑣𝑎𝑟",
-"𝑄ə𝑙𝑏𝑖 𝑔𝑜̈𝑧ə𝑙 𝑜𝑙𝑎𝑛ı𝑛 𝑔ö𝑧ü𝑛𝑑ə𝑛 𝑦𝑎ş ə𝑘𝑠𝑖𝑘 𝑜𝑙𝑚𝑎𝑧𝑚ış",
-"𝐻ə𝑟 ş𝑒𝑦𝑖𝑛 𝑏𝑖𝑡𝑑𝑖𝑦𝑖 𝑦𝑒𝑟𝑑ə 𝑚ə𝑛𝑑ə 𝑏𝑖𝑡𝑑𝑖𝑚 𝑑ə𝑦𝑖ş𝑑𝑖𝑛 𝑑𝑒𝑦ə𝑛𝑙ə𝑟𝑖𝑛 ə𝑠ə𝑟𝑖𝑦ə𝑚",
-"𝐺ü𝑣ə𝑛𝑚ə𝑘 𝑠𝑒𝑣𝑚ə𝑘𝑑ə𝑛 𝑑𝑎ℎ𝑎 𝑑ə𝑦ə𝑟𝑙𝑖, 𝑍𝑎𝑚𝑎𝑛𝑙𝑎 𝑎𝑛𝑙𝑎𝑟𝑠ı𝑛",
-"İ𝑛ş𝑎𝑙𝑙𝑎ℎ 𝑠ə𝑏𝑟𝑙ə  𝑔𝑜̈𝑧𝑙ə𝑑𝑖𝑦𝑖𝑛 ℎ𝑒𝑟 ş𝑒𝑦 𝑢̈𝑐̧𝑢̈𝑛 𝑥𝑒𝑦𝑖𝑟𝑙𝑖 𝑏𝑖𝑟 𝑥ə𝑏ə𝑟 𝑎𝑙ı𝑟𝑠ı𝑛",
-"İ𝑛𝑠𝑎𝑛 𝑏ə𝑧ə𝑛 𝑏𝑜̈𝑦𝑢̈𝑘 𝑥ə𝑦𝑎𝑙𝑙𝑎𝑟𝚤𝑛𝚤 𝑘𝑖𝑐̧𝑖𝑘 𝑖𝑛𝑠𝑎𝑛𝑙𝑎𝑟𝑙𝑎 𝑧𝑖𝑦𝑎𝑛 𝑒𝑑ə𝑟 ",
-"Ö𝑙𝑚ə𝑘 𝐵𝑖𝑟 ş𝑒𝑦 𝑑𝑒y𝑖𝑙 𝑦𝑎ş𝑎𝑚𝑎𝑚𝑎𝑞 𝑞𝑜𝑟𝑥𝑢𝑛𝑐",
-"𝐻ə𝑟𝑘ə𝑠𝑖𝑛 𝑏𝑖𝑟 𝑘𝑒ç𝑚𝑖ş𝑖 𝑣𝑎𝑟, 𝐵𝑖𝑟𝑑ə 𝑣𝑎𝑧𝑔𝑒ç𝑚𝑖ş𝑖",
-"𝐺ü𝑐𝑙ü 𝑔ö𝑟ü𝑛ə 𝑏𝑖𝑙ə𝑟ə𝑚 𝑎𝑚𝑎 𝑖𝑛𝑎𝑛           𝑦𝑜𝑟𝑔̆𝑢𝑛𝑎𝑚",
-"𝐻ə𝑦𝑎𝑡 𝑛ə 𝑔𝑒𝑑ə𝑛𝑖 𝑔𝑒𝑟𝑖 𝑔ə𝑡𝑖𝑟𝑖𝑟 𝑛ə𝑑ə 𝑖𝑡𝑖𝑟𝑑𝑖𝑦𝑖𝑛𝑖𝑧 𝑧𝑎𝑚𝑎𝑛ı 𝑔𝑒𝑟𝑖 𝑔ə𝑡𝑖𝑟𝑖𝑟",                   
-"𝐸𝑘𝑚𝑒𝑘 𝑝𝑎ℎ𝑎𝑙ı 𝑒𝑚𝑒𝑘 𝑢𝑐𝑢𝑧𝑑𝑢."
+"Some people feel the rain, others just get wet,"
+"Remember; Not everyone who comes loves.. And no lovers leave",
+"No soul's pain is less than yours",
+"I try everything; but I do what I can.",
+"Love is the whole story of a woman's life and the only adventure of a man.",
+"Happiness is first of all in physical health.",
+"It's not how long we live, it's how we live"
+"Earth is a rainbow, mind is a prism, and existence is a white ray.",
+"If you don't know where you're going, it doesn't matter which way you go.",
+"It's the most precious time in life. Be careful who you give a gift to.",
+"You can't break all the windows in the house and then knock on the door.",
+"Happiness is not in the way you live, but in the way you look at life.",
+"Remember; Not everyone who comes loves.. And no lovers leave.",
+"Half a breath in this life. Plan nothing but love...",
+"I wish everyone a life as good as the good in them.",
+"What makes beauty beautiful is decency, and decency is the reason to love beauty!",
+"The fragrance of the rose remains in the hands of the one who gives the rose."
+"What you seek is what seeks you.",
+"Even a bird flaps its wings in the sky.",
+"Life is not entrusted to those who do not know how to take heart.",
+"Don't be afraid to be honest, you will lose the most to the wrong people.",
+"A person is not a tree, when it breaks you make a sound.",
+"Learning is the only proof of life.",
+"As the world's population increases, the number of people decreases.",
+"Never tell the truth to people you don't think deserve it.",
+"Thank goodness the sky doesn't fit in any wallet yet.",
+"Be yourself. Everyone has already taken it.",	
+"I was hurt, I swallowed the lumps in my throat.",
+"She smiled so beautifully that if I didn't love her, it would be in vain.",
+"I'm not the one he loves. I can't tell you the pain of this.",
+"I'm not the one he loves. I can't tell you the pain of this.",
+"You get used to everything with time, but it doesn't end.",
+"If you tell the truth, you don't need to remember anything.",
+"Be the first to tell the truth... Otherwise, someone will definitely tell the truth instead of you.",
+"Men may be stronger, but women are resilient.",
+"There is no prescription for pain,"
+"All dreams can come true if you have the courage to pursue them.",
+"This is a secret love, I can't tell anyone about my troubles.",
+"Do you think love forgives everything?",
+"You and I need a cigarette"
+"I didn't know anyone special than you,"
+"One day love ends, memories remain"
+"Love is such a long word!",
+"You are the most memorable thing I remember.",
+"There are people I miss laughing with.",
+"The one who finds happiness in you is yours, moreover, the guest.",
+"Love a lot, but if you don't like it, don't force it!"
+"She laughed so beautifully that it would be a shame if I didn't love her.",
+"and a man should be a companion to a man and heal his wounds",
+"The graveyard is full of those who regret the nerve",
+"Love is like the wind, you can't see it, but you can feel it."
+"there is a scale, there is a measure, there is a time for everything",
+"Don't be fooled by innocent looks, some of them are given a standing ovation by the devil...",
+"life is not long enough to wait for tomorrow",
+"The good never lose, they are lost."
+"I hope you don't need the love you've been missing",
+"I wish you would give peace instead of reason",
+"I really miss that smell I never knew",
 )	
 
 @client.on(events.NewMessage(pattern="^/stag ?(.*)"))
@@ -405,13 +367,13 @@ async def mentionall(event):
 
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu əmr qruplar üçün etibarlıdır! ** ")
+    return await event.respond("**This command is valid for groups! ** ")
 
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu əmrdən yalnız idarəçilər istifadə edə bilər! ** ")
+    return await event.respond("**Only administrators can use this command! ** ")
 
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -420,11 +382,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
+        return await event.respond("**I Can Reply to Previous Messages! **")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
+    return await event.respond("**There is no reason to start! **")
   else:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur,yazın...! **")
+    return await event.respond("**There is no reason to start, write...! **")
 
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -434,7 +396,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("**Operation Stopped Successfully!**")
         return
       if usrnum == 1: 
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -452,7 +414,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
+        await event.respond("**Operation Stopped Successfully! ** ")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -480,19 +442,19 @@ async def cancel(event):
   tekli_calisan.remove(event.chat_id)
 
 	
-@client.on(events.NewMessage(pattern="^/usta ?(.*)"))
+@client.on(events.NewMessage(pattern="^/master ?(.*)"))
 
 async def mentionall(event):
 
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu əmr qruplar üçün etibarlıdır! ** ")
+    return await event.respond("**This command is valid for groups! ** ")
 
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu əmrdən yalnız idarəçilər istifadə edə bilər! ** ")
+    return await event.respond("**Only administrators can use this command! ** ")
 
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -501,11 +463,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
+        return await event.respond("**I Can Reply to Previous Messages! **")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
+    return await event.respond("**There is no reason to start! **")
   else:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur,yazın...! **")
+    return await event.respond("**There is no reason to start, write...! **")
 
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -515,7 +477,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{random.choice(usta)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("**Operation Stopped Successfully! **")
         return
       if usrnum == 1: 
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -533,7 +495,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"↯ [{random.choice(usta)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
+        await event.respond("**Operation Stopped Successfully! ** ")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -541,7 +503,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-usta = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən dediyim sözü elədin? 😐','Həyatımın dolması 🥲 nassın😍','Mənə niyə elə baxırsan? 🌝','İkinci planda olmaqdansa, plana daxil olmamağı seçərəm.  🎯','səni basqa qrublardada görmüsdüm ','Ac olanda sən o sən deyilsən','Niyə yalan danışırsan adamın üstündə patalok var','Həci necəsən ficuuu ','köhnə məkanın yeni sakini ','günün günnən durdun uzax de görüm haramı bəyənmədin','deyrlər ölübsən🤔','Güçlüyüm... Çünkü başka seçeneğim yok düşersem tutanım olmayacak biliyorum...🚬','gəl bir birimizi arka sokaklar bitənə qədər sevək❤️','corona belə böyüdü sən böyümədin','corona belə unduldu səni unuda bilmədim🚬','səni sevirəm sözündə neçə dənə samit var','oğlanlar niyə az yaşayır','bitkilər yaşlandıqcamı ölər yoxsa baxımsızlıqdanmı','isti havada çay içirsən hələdə','allah rəhmət eləsin','tez gəlin hədiyyəli yarışımız basladı','Benim hayelerim kelebeğin ömrü kadar yaşar 💔🥀','Çiçəklərə aşağıdan baxmağa gedirəm..➰','susмuş вir qadın üçün... вiтмiş вir adaмsan.! 🖤','𝚂ə𝚏𝚕ə𝚛𝚒𝚗𝚒 𝚞̈𝚣𝚕ə𝚛𝚒𝚗ə 𝚟𝚞𝚛𝚖𝚊𝚍𝚒𝚐̆𝚒𝚖𝚒𝚣 𝚞̈𝚌̧𝚞̈𝚗 𝚘̈𝚣𝚕𝚎𝚛𝚒𝚗𝚒 𝚚𝚞̈𝚜𝚞𝚛𝚜𝚞𝚣 𝚜𝚊𝚗𝚊𝚗 𝚒𝚗𝚜𝚊𝚗𝚕𝚊𝚛 𝚟𝚊𝚛😒','Güclü olmağa məndən daha çox ehtiyacın var, çünki haqsız olduğunu ürəyinin bir yerində bilirsən.🤙','Makiyaj və üz boyalarınıza güvənməyin. Yollar da gözəldir, lakin altından kanalizasiya keçir.👋😉','𝙸̇𝚝𝚒𝚛𝚍𝚒𝚢𝚒𝚗 𝚟𝚊𝚡𝚝𝚒 𝚚𝚊𝚢𝚝𝚊𝚛𝚊 𝚋𝚒𝚕𝚖ə𝚍𝚒𝚢𝚒𝚗 𝚔𝚒𝚖𝚒 𝚎𝚕ə𝚍𝚒𝚢𝚒𝚗 𝚙𝚒𝚜𝚕𝚒𝚢𝚒 𝚍ə 𝚑𝚎𝚌̧ 𝚟𝚊𝚡𝚝 𝚍𝚞̈𝚣ə𝚕𝚍ə 𝚋𝚒𝚕𝚖𝚎𝚢ə𝚌𝚎𝚔𝚜ən😐','𝙱𝚒𝚛𝚊𝚣 𝚒𝚗𝚜𝚊𝚗 𝚘𝚕 𝚍𝚎𝚢e𝚌ə𝚖 𝚊𝚖𝚖𝚊 𝚜ə𝚗𝚒 𝚍ə 𝚌̧ə𝚝𝚒𝚗 𝚟ə𝚣𝚒𝚢𝚢ə𝚝𝚍ə 𝚚𝚘𝚢𝚖𝚊𝚐̆ 𝚒𝚜𝚝ə𝚖𝚒𝚛ə𝚖🤧','İnsanlığa dəvət etdikdə yolu soruşan insanlar var.🔥😂','Qoyduğum şeyləri öz yerində tapa bilmirəm. Bəzilərini adam yerinə qoydum, indi gəl tap görün necə tapırsan✊','Ayə biri bunu aparsın🫢','Əgər bu həyatda öz tayını tapa bilmirsənsə üzülmə, deməli sən tayı bərabəri olmayan birisən.Qabriel Qarsia Markuez (Meksikalı yazıçı)🥲','Xoş Gəldim Nəfəs🥲','Gəlmirsən Balaca😒','Kimə Yazısan??? 🤨','Çirkin Çocuq Gəl😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə Çikolata🤓👉🍫','Sevmirsən Məni?🙁 Onda Ol🙂','Haa Düz derisən?🧐','Bu Kimdir😁','Gəl Dava Edəx😁💪','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢 Çirkin Ördək Yavrusu','Sən Kimsən🙄A Gədə👀','Gəl Sənə Sürpürüzüm var🤫','Ooo Çox Gözəlsin🤌🤐Bal','Şəxsiyə Yaz😌dünbələx','Gəl Görüm Hələ🧐 Nə demisən Mənə😬','Ayib Olsun😫 Niyə Yazmırsan😑','Bezdim Səndən🥲','Bu Neçədir✌️🙂','Nömrəni ver də Vpda yazışa🙊','👉👀 Gözün Çıxsın gəl😒','ımmm Gəl yogo yapalım🧘‍♀🤭','gəl sənə bıra süzdüm😪🍻','Ağlımı Başımdan ala şəxs😵‍💫gəl mənə doğru','Səni gördüm qızmam qalxdə🤒',) 
+usta = ('Who is this?','🙄👉🤲Aagil','🙄 Did you do what I said? 😐','My life is full 🥲 nassin😍','Why are you looking at me like that? 🌝','I d rather not be in the plan than be in the second plan. 🎯','I ve seen you in other groups','When youre hungry, you re not you','Why do you lie, the person has a bed on his head','Hajji, how are you? You don t like it','They say you re dead🤔','My strength... Because I have no other choice, I know I won t be able to catch you if I fall...🚬','Let s love each other until the back streets end❤️','Corona grew like this, you didn t grow','corona I couldn t forget you like this,','how many consonants are there in the word I love you','why do boys live less','do plants die when they get old or because of neglect','are you still drinking tea in hot weather','may God bless you','come soon our gift competition has started','My dreams live as long as a butterfly s life 💔🥀','I m going to look at the flowers from below..➰','For a silent woman... you are a lost man.! 🖤','Don t trust me, don t trust me.','You need to be strong more than me, because somewhere in your heart you know you are wrong.🤙','Makeup and face paints. The roads are beautiful, but sewer under it.👋😉 ',' 𝙸𝙸𝚝𝚒𝚛𝚍𝚒𝚢𝚒𝚗𝚌𝚎𝚔𝚜𝚌𝚎𝚔𝚜𝚌𝚎𝚔𝚜𝚍a 𝚑𝚎𝚌𝚍𝚒𝚢𝚒𝚗 𝚔𝚒𝚖𝚒 𝚔𝚒𝚖𝚒𝚔𝚒𝚖𝚒𝚌𝚎𝚔𝚜𝚌𝚎𝚔𝚜𝚍a 𝚑𝚎𝚌𝚗𝚒𝚟𝚊𝚡𝚝 𝚟𝚊𝚡𝚝 𝚘𝚕 𝚍𝚎𝚢 𝚚𝚘𝚢𝚖𝚊𝚐̆ 𝚊𝚖𝚖𝚊𝚗𝚒𝚗𝚒𝚗𝚒 𝚌 𝚌 𝚌 𝚚𝚘𝚢𝚖𝚊𝚐̆𝚚𝚘𝚢𝚖𝚊𝚐̆𝚖𝚒𝚛𝚖𝚒𝚛𝚜𝚜𝚗𝚒𝚗𝚒𝚍 𝚌 𝚌 𝚌 𝚌 𝚌 𝚌 𝚌 𝚌 𝚌 𝚌 𝚌 𝚌 there are people.🔥😂','I can t find the things I put in their place. I put some of them in people s place, now come find it and see how you find it✊','Let someone take it 🫢','If you can t find your match in this life, don t be upset, then you are a matchless match. Gabriel García Márquez (Mexican writer)🥲',' Welcome Nafas🥲','You re not coming Baby😒','Who are you writing to??? 🤨','Come Ugly Boy😌','My Chocolate😍','Oh You re Here 😳','Buy You Chocolate🤓👉🍫','Don t You Love Me?🙁 Then Be 🙂','Oh Are You Right?🧐',' Who s This😁','Come Fight 😁💪','Look What I Got You😌👉🐒','You re Beautiful🤢 Ugly Duckling','Who Are You🙄A Geda👀','Come I ve Got You 🤫',' Ooo You re so beautiful🤌🤐Honey','Private 😌doonbalah','Come see me yet🧐 What did you say to me😬','Shame on you😫 Why don t you write😑','I m sick of you🥲','How much is this✌️🙂','Your number send me a message on Vp🙊','👉👀 Get your eyes off come on😒','ummm Lets do yoga🧘‍♀🤭','come let me lick you😪🍻','Take my mind off my head😵‍💫come to me',' I saw you my daughter when you got up 🤒',) 
 
 
 @client.on(events.NewMessage(pattern='/offline'))
@@ -549,7 +511,7 @@ async def handler(event):
     # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sən mənə sahib deyilsən!__")
-    await event.reply('**Bot İşləyir Narahat olmayın** \n https://t.me/DegGixM \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯',
+    await event.reply('**Bot Working Dont worry ** \n https://t.me/DegGixM \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯',
 		     buttons=(
 	             [Button.url('DegGixM','https://t.me/DegGixM'),
 	             Button.url('Ali','https://t.me/MUCVE_M')],
