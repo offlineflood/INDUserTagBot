@@ -1,7 +1,7 @@
 {
   "name": "User Tag Bot",
   "logo":"https://te.legra.ph/file/512eac147a98221ab318e.jpg",
-  "description": "İstifadəçi tagger botu pulsuz üzvlərinizi etiketləyən bir botdur.",
+  "description": "User tagger bot is a bot that tags your members for free.",
   "env": {
     "BOT_TOKEN": {
       "description": "Bot icon from Botfather @BotFather.",
